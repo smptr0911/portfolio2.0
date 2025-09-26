@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio for showcasing design systems, engineering projects, and writing." />
+    <title>Jordan Rivera — Product Designer & Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="container">
+        <a class="logo" href="#top" aria-label="Jordan Rivera home">
+          <span class="logo__mark">JR</span>
+          <span class="logo__text">Jordan Rivera</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+          </button>
+          <ul id="site-menu" class="site-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#writing">Writing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__content">
+          <div>
+            <p class="hero__eyebrow">Product Designer & Front-end Engineer</p>
+            <h1 id="hero-title">Designing delightful experiences grounded in systems thinking.</h1>
+            <p class="hero__description">
+              I blend human-centered design with robust engineering to craft scalable products that people love.
+              From zero-to-one MVPs to global design systems, I help teams ship with clarity and confidence.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#projects">View projects</a>
+              <a class="button button--secondary" href="#contact">Let's collaborate</a>
+            </div>
+            <dl class="hero__stats">
+              <div>
+                <dt>10+</dt>
+                <dd>Years crafting digital products</dd>
+              </div>
+              <div>
+                <dt>24%</dt>
+                <dd>Increase in activation for latest redesign</dd>
+              </div>
+              <div>
+                <dt>5</dt>
+                <dd>Design systems launched across platforms</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="hero__portrait" aria-label="Portrait illustration">
+            <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=600&q=80" alt="Portrait of Jordan Rivera" />
+            <figcaption>Currently shaping the future of collaboration at Cohere Labs.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">About</p>
+            <h2 id="about-title">Systems-minded designer who codes.</h2>
+          </div>
+          <div class="section__body grid-two">
+            <p>
+              I design for clarity, usability, and measurable impact. My process is rooted in research and rapid iteration,
+              aligning diverse teams around a shared product vision. I specialize in building design systems and front-end
+              architectures that scale effortlessly.
+            </p>
+            <p>
+              Beyond product work, I mentor emerging designers, write about craft, and speak at design events. When I'm not
+              prototyping, you can find me curating playlists or exploring cities by bike.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section section--alt" aria-labelledby="skills-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Capabilities</p>
+            <h2 id="skills-title">A blend of strategic insight and hands-on craft.</h2>
+          </div>
+          <div class="skills__grid">
+            <article class="card">
+              <h3>Product Strategy</h3>
+              <p>Discovery workshops, customer research synthesis, roadmap alignment, success metrics.</p>
+              <ul class="skill-tags">
+                <li>Design sprints</li>
+                <li>Product vision</li>
+                <li>Journey mapping</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Experience Design</h3>
+              <p>Interaction patterns, accessibility audits, prototyping, usability testing, copywriting.</p>
+              <ul class="skill-tags">
+                <li>Figma</li>
+                <li>Axure</li>
+                <li>Maze</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Design Systems</h3>
+              <p>Component libraries, tokens, documentation, governance, cross-functional enablement.</p>
+              <ul class="skill-tags">
+                <li>Design tokens</li>
+                <li>Storybook</li>
+                <li>Accessibility</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Front-end Engineering</h3>
+              <p>Semantic HTML, scalable CSS architecture, React, performance audits, CI/CD workflows.</p>
+              <ul class="skill-tags">
+                <li>TypeScript</li>
+                <li>Next.js</li>
+                <li>Design ops</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Experience</p>
+            <h2 id="experience-title">Career at a glance.</h2>
+          </div>
+          <ol class="timeline">
+            <li class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">2021 — Present</span>
+                <h3>Cohere Labs · Principal Product Designer</h3>
+                <p>
+                  Leading the creation of a unified collaboration suite serving 6M users. Established a design system that
+                  reduced design debt by 38% and accelerated shipping cadence by 2×.
+                </p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">2017 — 2021</span>
+                <h3>Atlas Analytics · Staff Designer & Engineer</h3>
+                <p>
+                  Spearheaded cross-platform analytics tools and mentored a hybrid design-engineering team. Improved data
+                  comprehension scores by 26% through guided storytelling interfaces.
+                </p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">2013 — 2017</span>
+                <h3>Freelance · Product Designer</h3>
+                <p>
+                  Collaborated with early-stage startups to launch MVPs and design systems, winning two Webby honors for
+                  craft in interaction design.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="projects" class="section section--alt" aria-labelledby="projects-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Selected Work</p>
+            <h2 id="projects-title">Projects that moved metrics.</h2>
+          </div>
+          <div class="projects__grid">
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Dashboard interface with charts" />
+              <div class="project-card__content">
+                <h3>Unified Collaboration Suite</h3>
+                <p>
+                  Modernized workplace collaboration with shared canvases, video-first workflows, and real-time AI insights,
+                  resulting in 41% higher team adoption.
+                </p>
+                <a class="project-card__link" href="#">Read case study</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=600&q=80" alt="Mobile interface showing data visualizations" />
+              <div class="project-card__content">
+                <h3>Insights on the Go</h3>
+                <p>
+                  Architected a responsive analytics experience optimized for mobile, increasing executive engagement by 3×
+                  and cutting reporting time in half.
+                </p>
+                <a class="project-card__link" href="#">Read case study</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" alt="Team collaborating around sticky notes" />
+              <div class="project-card__content">
+                <h3>Design Ops Evolution</h3>
+                <p>
+                  Built a scalable design ops program with rituals, tooling, and measurement that doubled satisfaction scores
+                  across design and engineering.
+                </p>
+                <a class="project-card__link" href="#">Read case study</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="writing" class="section" aria-labelledby="writing-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Writing</p>
+            <h2 id="writing-title">Sharing lessons from the field.</h2>
+          </div>
+          <div class="writing__list">
+            <article class="writing__item">
+              <p class="writing__date">May 2024</p>
+              <h3><a href="#">Design Systems as Cultural Bridges</a></h3>
+              <p>How to align distributed teams through shared patterns, governance, and measurement frameworks.</p>
+            </article>
+            <article class="writing__item">
+              <p class="writing__date">Feb 2024</p>
+              <h3><a href="#">Measuring the ROI of Research</a></h3>
+              <p>Turning qualitative insights into product direction and stakeholder conviction.</p>
+            </article>
+            <article class="writing__item">
+              <p class="writing__date">Nov 2023</p>
+              <h3><a href="#">Accessibility as a Product Superpower</a></h3>
+              <p>Embedding inclusive practices in design systems to deliver better experiences for everyone.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section section--alt" aria-labelledby="testimonials-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Testimonials</p>
+            <h2 id="testimonials-title">Partners and peers on working together.</h2>
+          </div>
+          <div class="testimonial__grid">
+            <figure class="testimonial">
+              <blockquote>
+                “Jordan brings a rare combination of product vision, craft, and the ability to rally teams around a shared
+                goal. We shipped our most ambitious release on schedule because of their leadership.”
+              </blockquote>
+              <figcaption>
+                <span class="testimonial__name">Avery Chen</span>
+                <span class="testimonial__role">VP of Product, Cohere Labs</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonial">
+              <blockquote>
+                “They understand the nuances of design systems and how to evolve them sustainably. Our velocity and quality
+                improved dramatically.”
+              </blockquote>
+              <figcaption>
+                <span class="testimonial__name">Mateo Ruiz</span>
+                <span class="testimonial__role">Director of Engineering, Atlas Analytics</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonial">
+              <blockquote>
+                “Jordan mentors with clarity and empathy. Their guidance elevated our craft and confidence across the design
+                org.”
+              </blockquote>
+              <figcaption>
+                <span class="testimonial__name">Priya Kapoor</span>
+                <span class="testimonial__role">Lead Designer, Mosaic</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact" aria-labelledby="contact-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Get in touch</p>
+            <h2 id="contact-title">Let's build something meaningful.</h2>
+          </div>
+          <div class="contact__grid">
+            <div>
+              <p>
+                Whether you're shaping a new product or evolving a mature platform, I'm here to help. Share a bit about your
+                challenge and I'll respond within two business days.
+              </p>
+              <ul class="contact__details">
+                <li><strong>Email:</strong> <a href="mailto:hello@jordanrivera.design">hello@jordanrivera.design</a></li>
+                <li><strong>Location:</strong> Portland, OR · Remote friendly</li>
+                <li><strong>Availability:</strong> Accepting new collaborations from July 2024</li>
+              </ul>
+            </div>
+            <form class="contact__form" aria-label="Contact form">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" />
+
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+
+              <button type="submit" class="button button--primary">Send message</button>
+              <p class="contact__note">I'll never share your information. Required fields are marked.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__content">
+        <div>
+          <p class="site-footer__title">Jordan Rivera</p>
+          <p>Crafting considered products that balance user needs and business outcomes.</p>
+        </div>
+        <div class="site-footer__links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#writing">Writing</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="site-footer__meta">
+          <p>© <span id="current-year"></span> Jordan Rivera. All rights reserved.</p>
+          <a href="#top" class="site-footer__top">Back to top</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
