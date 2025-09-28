@@ -59,3 +59,39 @@ const yearEl = document.getElementById('current-year');
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
+
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Collect form data
+  const formData = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
+  };
+
+  // Validate form data
+  if (!formData.name || !formData.email || !formData.message) {
+    alert('Please fill out all required fields.');
+    return;
+  }
+
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(formData.email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  // Send the email using EmailJS
+  emailjs
+    .send('service_icd1tev', 'template_84p4g4o', formData) // Replace with your Service ID and Template ID
+    .then(() => {
+      alert('Message sent successfully!');
+      this.reset(); // Clear the form
+    })
+    .catch((error) => {
+      console.error('EmailJS Error:', error);
+      alert('Failed to send message. Please check your internet connection or try again later.');
+    });
+});
