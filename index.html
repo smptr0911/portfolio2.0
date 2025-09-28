@@ -237,18 +237,59 @@
                 <li><strong>Availability:</strong> Accepting new collaborations from July 2024</li>
               </ul>
             </div>
-            <form id="contact-form">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" required />
+            <form id="form">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+              </div>
 
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required />
-
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-
-              <button type="submit">Send</button>
+              <input type="submit" id="button" value="Send Email">
             </form>
+
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+            <script type="text/javascript">
+              // Initialize EmailJS with your public key
+              emailjs.init('VgEmCrq5czZ-BDKW8'); // Replace with your actual public key
+
+              // Add event listener for form submission
+              document.getElementById('form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Collect form data
+                const formData = {
+                  name: document.getElementById('name').value,
+                  email: document.getElementById('email').value,
+                  message: document.getElementById('message').value,
+                };
+
+                // Validate email format
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(formData.email)) {
+                  alert('Please enter a valid email address.');
+                  return;
+                }
+
+                // Send email using EmailJS
+                emailjs.send('service_icd1tev', 'template_84p4g4o', formData) // Replace with your Service ID and Template ID
+                  .then(() => {
+                    alert('Message sent successfully!');
+                    document.getElementById('form').reset(); // Clear the form
+                  })
+                  .catch((error) => {
+                    console.error('EmailJS Error:', error);
+                    alert('Failed to send message. Please try again later.');
+                  });
+              });
+            </script>
           </div>
         </div>
       </section>

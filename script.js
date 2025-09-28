@@ -60,38 +60,28 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-document.getElementById('contact-form').addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent the default form submission
+const btn = document.getElementById('button');
 
-  // Collect form data
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    message: document.getElementById('message').value,
-  };
+document.getElementById('form').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent default form submission
 
-  // Validate form data
-  if (!formData.name || !formData.email || !formData.message) {
-    alert('Please fill out all required fields.');
-    return;
-  }
+  btn.value = 'Sending...'; // Update button text
 
-  // Validate email format
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(formData.email)) {
-    alert('Please enter a valid email address.');
-    return;
-  }
+  const serviceID = 'default_service'; // Replace with your actual Service ID
+  const templateID = 'template_5v2r5ob'; // Replace with your actual Template ID
 
-  // Send the email using EmailJS
   emailjs
-    .send('service_icd1tev', 'template_84p4g4o', formData) // Replace with your Service ID and Template ID
-    .then(() => {
-      alert('Message sent successfully!');
-      this.reset(); // Clear the form
-    })
-    .catch((error) => {
-      console.error('EmailJS Error:', error);
-      alert('Failed to send message. Please check your internet connection or try again later.');
-    });
+    .sendForm(serviceID, templateID, this)
+    .then(
+      () => {
+        btn.value = 'Send Email'; // Reset button text
+        alert('Message sent successfully!');
+        this.reset(); // Clear the form
+      },
+      (err) => {
+        btn.value = 'Send Email'; // Reset button text
+        console.error('EmailJS Error:', err); // Log error to console
+        alert('Failed to send message. Please try again later.');
+      }
+    );
 });
