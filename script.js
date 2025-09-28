@@ -82,17 +82,18 @@ document.getElementById('form').addEventListener('submit', function (event) {
   // Update button text to indicate sending
   btn.value = 'Sending...';
 
-  const serviceID = 'default_service'; // Replace with your actual Service ID
+  const serviceID = 'service_icd1tev'; // Replace with your actual Service ID
   const templateID = 'template_5v2r5ob'; // Replace with your actual Template ID
 
   // Send email using EmailJS
   emailjs
+    
     .send(serviceID, templateID, formData) // Use emailjs.send() instead of emailjs.sendForm()
     .then(
       () => {
         btn.value = 'Send Email'; // Reset button text
         alert('Message sent successfully!');
-        this.reset(); // Clear the form
+        document.getElementById('form').reset();
       },
       (err) => {
         btn.value = 'Send Email'; // Reset button text
