@@ -87,7 +87,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
   // Send email using EmailJS
   emailjs
-    .sendForm(serviceID, templateID, this)
+    .send(serviceID, templateID, formData) // Use emailjs.send() instead of emailjs.sendForm()
     .then(
       () => {
         btn.value = 'Send Email'; // Reset button text
