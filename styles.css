@@ -699,3 +699,9 @@ input[type="submit"]:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+body.dark .field input,
+body.dark .field textarea {
+  background-color: #111c34; /* Dark background */
+  color: #e2e8f0; /* Light text color */
+}
