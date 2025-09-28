@@ -65,11 +65,27 @@ const btn = document.getElementById('button');
 document.getElementById('form').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent default form submission
 
-  btn.value = 'Sending...'; // Update button text
+  // Collect form data
+  const formData = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
+  };
+
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(formData.email)) {
+    alert('Please enter a valid email address.');
+    return; // Stop execution if email is invalid
+  }
+
+  // Update button text to indicate sending
+  btn.value = 'Sending...';
 
   const serviceID = 'default_service'; // Replace with your actual Service ID
   const templateID = 'template_5v2r5ob'; // Replace with your actual Template ID
 
+  // Send email using EmailJS
   emailjs
     .sendForm(serviceID, templateID, this)
     .then(
