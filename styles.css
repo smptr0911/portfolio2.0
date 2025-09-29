@@ -705,3 +705,10 @@ body.dark .field textarea {
   background-color: #111c34; /* Dark background */
   color: #e2e8f0; /* Light text color */
 }
+
+.resume__actions iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  object-fit: contain; /* Ensures the content fits within the iframe */
+}
