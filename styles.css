@@ -711,6 +711,4 @@ body.dark .field textarea {
   height: 500px;
   border: none;
   object-fit: contain; /* Ensures the content fits within the iframe */
-  transform: scale(1.0); /* Scales the content to fit better */
-  transform-origin: top left; /* Ensures scaling starts from the top-left corner */
 }
