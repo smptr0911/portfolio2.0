@@ -13,6 +13,10 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init('VgEmCrq5czZ-BDKW8'); // Replace 'VgEmCrq5czZ-BDKW8' with your actual public key
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -276,15 +280,21 @@
                 }
 
                 // Send email using EmailJS
-                emailjs.send('service_icd1tev', 'template_84p4g4o', formData) // Replace with your Service ID and Template ID
-                  .then(() => {
+                emailjs.send('service_icd1tev', 'template_84p4g4o', formData)
+                .then((response) => {
+                  // Check if EmailJS indicates a proper success
+                  if (response.status === 200) {
                     alert('Message sent successfully!');
                     document.getElementById('form').reset(); // Clear the form
-                  })
-                  .catch((error) => {
-                    console.error('EmailJS Error:', error);
+                  } else {
+                    console.error('Unexpected response:', response);
                     alert('Failed to send message. Please try again later.');
-                  });
+                  }
+                })
+                .catch((error) => {
+                  console.error('EmailJS Error:', error);
+                  alert('Failed to send message. Please try again later.');
+                });
               });
             </script>
           </div>
