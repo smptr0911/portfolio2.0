@@ -65,10 +65,13 @@ const btn = document.getElementById('button');
 document.getElementById('form').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent default form submission
 
+  // Capture the form element to later reset it
+  const form = event.target;
+
   // Collect form data
   const formData = {
     name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
+    user_email: document.getElementById('email').value, // Use expected key
     message: document.getElementById('message').value,
   };
 
@@ -82,8 +85,8 @@ document.getElementById('form').addEventListener('submit', function (event) {
   // Update button text to indicate sending
   btn.value = 'Sending...';
 
-  const serviceID = 'service_icd1tev'; // Replace with your actual Service ID
-  const templateID = 'template_5v2r5ob'; // Replace with your actual Template ID
+  const serviceID = 'service_icd1tev'; // Verify this value in your EmailJS dashboard
+  const templateID = 'template_84p4g4o'; // Verify this value in your EmailJS dashboard
 
   // Send email using EmailJS
   emailjs
@@ -91,12 +94,12 @@ document.getElementById('form').addEventListener('submit', function (event) {
     .then((response) => {
       console.log('EmailJS success response:', response);
       alert('Message sent successfully!');
-      form.reset();
-      btn.value = 'Send Email';
+      form.reset(); // Clear the form
+      btn.value = 'Send Email'; // Reset button text
     })
     .catch((error) => {
       console.error('EmailJS error response:', error);
       alert('Failed to send message. Please try again later.');
-      btn.value = 'Send Email';
+      btn.value = 'Send Email'; // Reset button text
     });
 });
