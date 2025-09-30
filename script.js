@@ -103,3 +103,11 @@ document.getElementById('form').addEventListener('submit', function (event) {
       btn.value = 'Send Email'; // Reset button text
     });
 });
+
+emailjs.send('service_icd1tev','template_84p4g4o',{
+   name:'Test User',
+   email:'test@example.com',
+   message:'Testing EmailJS'
+})
+.then(res=>console.log('OK',res))
+.catch(err=>console.error('ERR',err));

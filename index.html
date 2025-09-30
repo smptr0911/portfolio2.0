@@ -254,6 +254,49 @@
 
               <input type="submit" id="button" value="Send Email">
             </form>
+
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+            <script type="text/javascript">
+              // Initialize EmailJS with your public key
+              emailjs.init('VgEmCrq5czZ-BDKW8'); // Replace with your actual public key
+
+              // Add event listener for form submission
+              document.getElementById('form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Collect form data
+                const formData = {
+                  name: document.getElementById('name').value,
+                  email: document.getElementById('email').value,
+                  message: document.getElementById('message').value,
+                };
+
+                // Validate email format
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(formData.email)) {
+                  alert('Please enter a valid email address.');
+                  return;
+                }
+
+                // Send email using EmailJS
+                emailjs.send('service_icd1tev', 'template_84p4g4o', formData)
+                .then((response) => {
+                  // Check if EmailJS indicates a proper success
+                  if (response.status === 200) {
+                    alert('Message sent successfully!');
+                    document.getElementById('form').reset(); // Clear the form
+                  } else {
+                    console.error('Unexpected response:', response);
+                    alert('Failed to send message. Please try again later.');
+                  }
+                })
+                .catch((error) => {
+                  console.error('EmailJS Error:', error);
+                  alert('Failed to send message. Please try again later.');
+                });
+              });
+            </script>
           </div>
         </div>
       </section>
