@@ -87,18 +87,16 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
   // Send email using EmailJS
   emailjs
-    
-    .send(serviceID, templateID, formData) // Use emailjs.send() instead of emailjs.sendForm()
-    .then(
-      () => {
-        btn.value = 'Send Email'; // Reset button text
-        alert('Message sent successfully!');
-        document.getElementById('form').reset();
-      },
-      (err) => {
-        btn.value = 'Send Email'; // Reset button text
-        console.error('EmailJS Error:', err); // Log error to console
-        alert('Failed to send message. Please try again later.');
-      }
-    );
+    .send(serviceID, templateID, formData)
+    .then((response) => {
+      console.log('EmailJS success response:', response);
+      alert('Message sent successfully!');
+      form.reset();
+      btn.value = 'Send Email';
+    })
+    .catch((error) => {
+      console.error('EmailJS error response:', error);
+      alert('Failed to send message. Please try again later.');
+      btn.value = 'Send Email';
+    });
 });
