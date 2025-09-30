@@ -12,16 +12,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <!-- Load EmailJS library with defer -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
-    <!-- Initialize EmailJS (also deferred) -->
-    <script defer>
-      document.addEventListener("DOMContentLoaded", function() {
-        emailjs.init('VgEmCrq5czZ-BDKW8'); // Replace with your actual public key
-      });
-    </script>
-    <!-- Then load your main script -->
     <script defer src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init('VgEmCrq5czZ-BDKW8'); // Replace 'VgEmCrq5czZ-BDKW8' with your actual public key
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
