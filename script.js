@@ -68,18 +68,18 @@ document.getElementById('form').addEventListener('submit', function (event) {
   // Capture the form element to later reset it
   const form = event.target;
 
-  // Collect form data
   const formData = {
     name: document.getElementById('name').value,
-    user_email: document.getElementById('email').value, // Use expected key
+    email: document.getElementById('email').value,   // rename to 'email'
     message: document.getElementById('message').value,
   };
 
+
   // Validate email format
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(formData.email)) {
+  if (!emailRegex.test(formData.user_email)) {
     alert('Please enter a valid email address.');
-    return; // Stop execution if email is invalid
+    return;
   }
 
   // Update button text to indicate sending
