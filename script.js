@@ -60,45 +60,43 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-const btn = document.getElementById('button');
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('button');
+  const form = document.getElementById('form');
 
-document.getElementById('form').addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent default form submission
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-  // Collect form data
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    message: document.getElementById('message').value,
-  };
+    // Collect form data
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      message: document.getElementById('message').value,
+    };
 
-  // Validate email format
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(formData.email)) {
-    alert('Please enter a valid email address.');
-    return; // Stop execution if email is invalid
-  }
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
 
-  // Update button text to indicate sending
-  btn.value = 'Sending...';
+    // Update button text to indicate sending
+    btn.value = 'Sending...';
 
-  const serviceID = 'service_icd1tev'; // Replace with your actual Service ID
-  const templateID = 'template_5v2r5ob'; // Replace with your actual Template ID
+    const serviceID = 'service_icd1tev';      // Replace with your actual Service ID
+    const templateID = 'template_84p4g4o';      // Replace with your actual Template ID
 
-  // Send email using EmailJS
-  emailjs
-    
-    .send(serviceID, templateID, formData) // Use emailjs.send() instead of emailjs.sendForm()
-    .then(
-      () => {
-        btn.value = 'Send Email'; // Reset button text
+    emailjs.send(serviceID, templateID, formData)
+      .then(() => {
         alert('Message sent successfully!');
-        document.getElementById('form').reset();
-      },
-      (err) => {
+        form.reset();             // Clear the form
         btn.value = 'Send Email'; // Reset button text
-        console.error('EmailJS Error:', err); // Log error to console
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
         alert('Failed to send message. Please try again later.');
-      }
-    );
+        btn.value = 'Send Email'; // Reset button text
+      });
+  });
 });
