@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio for showcasing design systems, engineering projects, and writing." />
+    <title>Bedro Park — Software Engineer & Problem Solver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
+    <script>
+      emailjs.init('VgEmCrq5czZ-BDKW8'); // Replace 'VgEmCrq5czZ-BDKW8' with your actual public key
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="container">
+        <a class="logo" href="#top" aria-label="Bedro Park home">
+          <span class="logo__mark">BP</span>
+          <span class="logo__text">Bedro Park</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+          </button>
+          <ul id="site-menu" class="site-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#resume">Resume</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__content">
+          <div>
+            <p class="hero__eyebrow">AI + Full-Stack Engineer</p>
+            <h1 id="hero-title">Shipping automation, AI workflows, and reliable web products.</h1>
+            <p class="hero__description">
+              I design and build systems that blend AI, automation, and thoughtful UX. From multi-agent Discord bots to outbound-email pipelines and course search tools, I deliver measurable improvements and keep reliability front and center.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#projects">View projects</a>
+              <a class="button button--secondary" href="#contact">Let's collaborate</a>
+            </div>
+            <dl class="hero__stats">
+              <div>
+                <dt>4</dt>
+                <dd>AI + automation builds shipped</dd>
+              </div>
+              <div>
+                <dt>Top 30%</dt>
+                <dd>ICPC programming contest on first attempt</dd>
+              </div>
+              <div>
+                <dt>EN · KR</dt>
+                <dd>Bilingual collaborator</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="hero__portrait" aria-label="Portrait illustration">
+            <img src="images/IMG_9076.jpg" alt="Portrait of Bedro Park" />
+            <figcaption>“I code to create impact and solve real-world challenges.”</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">About</p>
+            <h2 id="about-title">Engineer blending AI, backend systems, and teaching.</h2>
+          </div>
+          <div class="section__body grid-two">
+            <p>
+              I'm Bedro Park, a computer science student at Simon Fraser University (previously Trinity Western University) who turns AI ideas into working products. My work ranges from multi-agent Discord automation to outbound email pipelines and course search tools.
+            </p>
+            <p>
+              Outside of code, I tutor math, compete in programming contests, and explore new ways to make AI-driven systems practical. I enjoy collaborating across teams and simplifying complex problems for others.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section section--alt" aria-labelledby="skills-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Capabilities</p>
+            <h2 id="skills-title">Technical expertise and problem-solving skills.</h2>
+          </div>
+          <div class="skills__grid">
+            <article class="card">
+              <h3>Programming Languages</h3>
+              <p>Proficient across compiled and scripting languages for backend and product work.</p>
+              <ul class="skill-tags">
+                <li>Java</li>
+                <li>Python</li>
+                <li>C/C++</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Web & Backend</h3>
+              <p>Builds full-stack apps and services with modern frameworks and UI systems.</p>
+              <ul class="skill-tags">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>FastAPI</li>
+                <li>Flask</li>
+                <li>Spring Boot</li>
+                <li>WordPress</li>
+                <li>Material-UI</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>DevOps & Tools</h3>
+              <p>Comfortable shipping, testing, and monitoring in collaborative environments.</p>
+              <ul class="skill-tags">
+                <li>GitHub Actions (CI/CD)</li>
+                <li>Docker</li>
+                <li>Postman</li>
+                <li>VS Code</li>
+                <li>IntelliJ</li>
+                <li>Eclipse</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Data, AI & Communication</h3>
+              <p>Hands-on with AI workflows, data handling, and bilingual collaboration.</p>
+              <ul class="skill-tags">
+                <li>Prompt Engineering</li>
+                <li>Pandas</li>
+                <li>Gson</li>
+                <li>Bilingual: English/Korean</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Experience</p>
+            <h2 id="experience-title">Professional and academic highlights.</h2>
+          </div>
+          <ol class="timeline">
+            <li class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">May 2025 — Present</span>
+                <h3>Executive Tech Team · SFU Open Source Development Club</h3>
+                <p>Designed and deployed backend services with APIs and JSON data handling to automate recruitment workflows and email notifications for multiple teams.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">Feb 2025 — Jul 2025</span>
+                <h3>Private Math Tutor</h3>
+                <p>Created customized lesson plans and explained limits, derivatives, and integrals in accessible language to strengthen problem-solving skills.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">Jan 2023 — Feb 2023</span>
+                <h3>ICPC Contestant · Top 30%</h3>
+                <p>Ranked in the top 30% after solving 7/10 problems in 4 hours; strengthened high-pressure algorithmic problem-solving.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="education" class="section section--alt" aria-labelledby="education-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Education</p>
+            <h2 id="education-title">Computer science foundation.</h2>
+          </div>
+          <div class="grid-two">
+            <article class="card">
+              <h3>Simon Fraser University</h3>
+              <p>Bachelor of Arts in Computer Science · Jan 2023 — Present · Burnaby, BC</p>
+              <p>Focus on algorithms, backend systems, and AI-driven products.</p>
+            </article>
+            <article class="card">
+              <h3>Trinity Western University</h3>
+              <p>Bachelor of Arts in Computer Science · Sep 2022 — Dec 2023 · Langley, BC</p>
+              <p>Completed foundational CS and mathematics before transferring to SFU.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section--alt" aria-labelledby="projects-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Selected Work</p>
+            <h2 id="projects-title">Projects that demonstrate impact.</h2>
+          </div>
+          <div class="projects__grid">
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Automation dashboard" />
+              <div class="project-card__content">
+                <h3>AI-Powered Cold Outreach Optimization</h3>
+                <p>Built an automated outbound-email pipeline in n8n with dynamic variables and routing, applying prompt engineering for realtor cold outreach and delivering measurable workflow improvements.</p>
+                <p class="project-card__meta">Dec 2025 — Jan 2026 · Paid matched project</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=800&q=80" alt="Course search UI" />
+              <div class="project-card__content">
+                <h3>SFU Course Enrolment Helper</h3>
+                <p>Full-stack web app with AI-generated professor summaries, semantic search, and microservices (FastAPI, PostgreSQL, Docker) that aggregate SFU course data with RMP and Reddit reviews.</p>
+                <p class="project-card__meta">Nov 2025 — Dec 2025</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80" alt="Team collaboration visuals" />
+              <div class="project-card__content">
+                <h3>OS Dev Club Website Automation</h3>
+                <p>Node.js, React, and Spring project that structured JSON data, validated forms, integrated APIs, and automated email dispatch for recruitment across SFU’s Open Source Development Club.</p>
+                <p class="project-card__meta">Sep 2025 — Nov 2025</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Multi-agent AI bot" />
+              <div class="project-card__content">
+                <h3>Discord Multi-Agent AI Bot</h3>
+                <p>Built a multi-agent Discord bot simulating front-end, back-end, DevOps, and Scrum Master roles using OpenAI models, autonomous behaviors, Docker, AWS Lambda, and GitHub Actions.</p>
+                <p class="project-card__meta">Jan 2025 — Aug 2025</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact" aria-labelledby="contact-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Get in touch</p>
+            <h2 id="contact-title">Let's build something meaningful.</h2>
+          </div>
+          <div class="contact__grid">
+            <div>
+              <p>
+                Whether you're shaping a new product or solving a challenging problem, I'm here to help. Share a bit about your project, and I'll respond within two business days.
+              </p>
+              <ul class="contact__details">
+                <li><strong>Email:</strong> <a href="mailto:bpa51@sfu.ca">bpa51@sfu.ca</a></li>
+                <li><strong>Location:</strong> Surrey, BC, Canada</li>
+                <li><strong>Availability:</strong> Open to internships, co-op, and matched projects</li>
+              </ul>
+            </div>
+            <form id="form">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+              </div>
+
+              <input type="submit" id="button" value="Send Email">
+            </form>
+
+            <script type="text/javascript">
+              // ✅ Initialize EmailJS (v4 syntax)
+              emailjs.init({
+                publicKey: "VgEmCrq5czZ-BDKW8" // <-- your actual public key
+              });
+
+              document.getElementById('form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const formData = {
+                  name: document.getElementById('name').value,
+                  email: document.getElementById('email').value,
+                  message: document.getElementById('message').value
+                };
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(formData.email)) {
+                  alert('Please enter a valid email address.');
+                  return;
+                }
+
+                // ✅ Send email
+                emailjs.send('service_icd1tev', 'template_84p4g4o', formData)
+                  .then(() => {
+                    alert('Message sent successfully!');
+                    document.getElementById('form').reset();
+                  })
+                  .catch((error) => {
+                    console.error('EmailJS Error:', error);
+                    alert('Failed to send message. Please try again later.');
+                  });
+              });
+            </script>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="section" aria-labelledby="resume-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Resume</p>
+            <h2 id="resume-title">My Professional Resume</h2>
+          </div>
+          <div class="section__body">
+            <p>
+              Below is my resume showcasing my skills, experience, and achievements. You can view it directly or download it for later reference.
+            </p>
+            <div class="resume__actions">
+              <!-- Embed the resume -->
+              <embed
+                src="Bedro_s_Resume.pdf"
+                width="100%"
+                height="500px"
+                style="border: none;"
+                aria-label="Embedded resume"
+              />
+              <!-- Download link -->
+              <a class="button button--primary" href="Bedro_s_Resume.pdf" download="Bedro_s_Resume.pdf">
+                Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__content">
+        <div>
+          <p class="site-footer__title">Bedro Park</p>
+          <p>Building efficient solutions through code and collaboration.</p>
+        </div>
+        <div class="site-footer__links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="site-footer__meta">
+          <p>© <span id="current-year"></span> Bedro Park. All rights reserved.</p>
+          <a href="#top" class="site-footer__top">Back to top</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
