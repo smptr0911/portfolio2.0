@@ -36,7 +36,8 @@
           <ul id="site-menu" class="site-menu">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#experience">Work</a></li>
+            <li><a href="#academic-experience">Academic</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -167,16 +168,58 @@
       <section id="experience" class="section" aria-labelledby="experience-title">
         <div class="container section__content">
           <div class="section__header">
-            <p class="section__eyebrow">Experience</p>
-            <h2 id="experience-title">Professional and academic highlights.</h2>
+            <p class="section__eyebrow">Work Experience</p>
+            <h2 id="experience-title">Computer Science Internships.</h2>
           </div>
           <ol class="timeline">
             <li class="timeline__item">
               <div class="timeline__marker"></div>
               <div class="timeline__content">
-                <span class="timeline__date">May 2025 — Present</span>
+                <span class="timeline__date">Mar 2026 — May 2026</span>
+                <h3>Software Engineer Intern · Noble Solutions Group</h3>
+                <p>Designed an AI chatbot platform with multi-provider LLM routing across OpenAI, Anthropic, Gemini, and NVIDIA NIM, enabling per-client model selection under one unified API.</p>
+                <p>Developed a real-time call recording and orchestration pipeline using LiveKit egress and Telnyx webhooks to capture MP3/OGG audio, voicemail recordings, transcripts, and automated call transfers.</p>
+                <p>Engineered a multi-tenant backend with FastAPI, PostgreSQL, Redis, Google Cloud workflow automation, rate limiting, and Grafana dashboards.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">Nov 2025 — Feb 2026</span>
+                <h3>Software Engineer Intern · Looniegroup</h3>
+                <p>Led a team of 5 building an AI-powered cold outreach optimization system for real estate firms using JavaScript, n8n, and Google Places API.</p>
+                <p>Designed workflows to identify and analyze nearby competitors within a 10-mile radius using custom search logic and conditional JavaScript for dynamic execution and data processing.</p>
+                <p>Retrieved and processed live data for 300+ real estate companies across 20+ parameters, including location, website URLs, and business owner information, then integrated results into Airtable.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="academic-experience" class="section section--alt" aria-labelledby="academic-experience-title">
+        <div class="container section__content">
+          <div class="section__header">
+            <p class="section__eyebrow">Academic Experience</p>
+            <h2 id="academic-experience-title">Academic Achievements and Leadership.</h2>
+          </div>
+          <ol class="timeline">
+            <li class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">April 2026 — Present</span>
+                <h3>Co President · SFU Open Source Development Club</h3>
+                <p>Led a team of developers in organizing open-source projects, coordinating contributions, and mentoring members in Git workflows and collaborative development practices.</p>
+                <p>Led DevOps initiatives by establishing CI/CD pipelines, GitHub Actions workflows, and standardized development practices to streamline open-source collaboration.</p>
+                <p>Reduced recruitment processing time by 50% by automating workflows using GitHub Actions and custom scripts.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">May 2025 — April 2026</span>
                 <h3>Executive Tech Team · SFU Open Source Development Club</h3>
-                <p>Designed and deployed backend services with APIs and JSON data handling to automate recruitment workflows and email notifications for multiple teams.</p>
+                <p>Designed and deployed backend services with REST APIs and JSON-based data handling.</p>
+                <p>Automated recruitment workflows and notifications, improving operational efficiency and scalability.</p>
               </div>
             </li>
             <li class="timeline__item">
@@ -199,21 +242,21 @@
         </div>
       </section>
 
-      <section id="education" class="section section--alt" aria-labelledby="education-title">
+      <section id="education" class="section" aria-labelledby="education-title">
         <div class="container section__content">
           <div class="section__header">
             <p class="section__eyebrow">Education</p>
-            <h2 id="education-title">Computer science foundation.</h2>
+            <h2 id="education-title">Computer Science Foundation.</h2>
           </div>
           <div class="grid-two">
             <article class="card">
               <h3>Simon Fraser University</h3>
-              <p>Bachelor of Arts in Computer Science · Jan 2023 — Present · Burnaby, BC</p>
+              <p>Bachelor of Science in Computer Science · Jan 2024 — Present · Burnaby, BC</p>
               <p>Focus on algorithms, backend systems, and AI-driven products.</p>
             </article>
             <article class="card">
               <h3>Trinity Western University</h3>
-              <p>Bachelor of Arts in Computer Science · Sep 2022 — Dec 2023 · Langley, BC</p>
+              <p>Bachelor of Science in Computer Science · Sep 2022 — Dec 2023 · Langley, BC</p>
               <p>Completed foundational CS and mathematics before transferring to SFU.</p>
             </article>
           </div>
@@ -228,11 +271,27 @@
           </div>
           <div class="projects__grid">
             <article class="project-card">
+              <img src="images/ai-chatbot.svg" alt="AI chatbot and mobile messaging interface" />
+              <div class="project-card__content">
+                <h3>AI Chatbot Platform</h3>
+                <p>Designed a paid multi-tenant AI chatbot platform with multi-provider LLM routing across OpenAI, Anthropic, Gemini, and NVIDIA NIM, enabling per-client model selection under a unified API.</p>
+                <p class="project-card__meta">Mar 2026 — May 2026 · Paid matched project</p>
+              </div>
+            </article>
+            <article class="project-card">
               <img src="images/promptcraft.jpg" alt="PromptCraft interface" />
               <div class="project-card__content">
                 <h3>PromptCraft (nwHacks 2026)</h3>
                 <p>Built an infinite 2D open‑world game with AI‑guided procedural maps, powered by a Django backend and a React + Phaser.js front end for real‑time gameplay.</p>
                 <p class="project-card__meta">Jan 2026 · Hackathon project</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <img src="images/cardio-score.svg" alt="Cardiovascular risk prediction dashboard" />
+              <div class="project-card__content">
+                <h3>Cardio Score (xHacks 2026)</h3>
+                <p>Developed a cardiovascular risk prediction system using Logistic Regression and XGBoost to generate probability-based health risk scores through a real-time Streamlit interface.</p>
+                <p class="project-card__meta">Feb 2026 · Hackathon project</p>
               </div>
             </article>
             <article class="project-card">
@@ -254,9 +313,9 @@
             <article class="project-card">
               <img src="images/devopswebsite.jpg" alt="Team collaboration visuals" />
               <div class="project-card__content">
-                <h3>OS Dev Club Website Automation</h3>
-                <p>Node.js, React, and Spring project that structured JSON data, validated forms, integrated APIs, and automated email dispatch for recruitment across SFU’s Open Source Development Club.</p>
-                <p class="project-card__meta">Sep 2025 — Nov 2025</p>
+                <h3>OS Dev Club Email Backend Pipeline</h3>
+                <p>Developed an Open Source for our club(OS Dev) website called Email Backend Outbound pipeline for executive member application using SMTP and Node.js.</p>
+                <p class="project-card__meta">Sep 2025</p>
               </div>
             </article>
             <article class="project-card">
