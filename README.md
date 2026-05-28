@@ -1,4 +1,4 @@
-# Jordan Rivera · Portfolio
+# Bedro Park· Portfolio
 
 A modern, responsive, and accessible personal portfolio website for a hybrid product designer and front-end engineer.
 
